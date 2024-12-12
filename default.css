@@ -757,42 +757,42 @@
     font-family: 'HarryPotter';
     font-weight: 100;
     font-display: optional;
-    src: url('/mnt/Apps/Jellyfin-Themes/Harry-Potter/fonts/harryp.TTF') format('truetype');
+    src: url('https://github.com/ebagcoder/harry-potter-theme/blob/main/fonts/harryp.TTF') format('truetype');
   }
   
   @font-face {
     font-family: 'HarryPotter';
     font-weight: 300;
     font-display: optional;
-    src: url('/mnt/Apps/Jellyfin-Themes/Harry-Potter/fonts/harryp.TTF') format('truetype');
+    src: url('https://github.com/ebagcoder/harry-potter-theme/blob/main/fonts/harryp.TTF') format('truetype');
   }
   
   @font-face {
     font-family: 'HarryPotter';
     font-weight: 400;
     font-display: optional;
-    src: url('/mnt/Apps/Jellyfin-Themes/Harry-Potter/fonts/lumos.TTF') format('truetype');
+    src: url('https://github.com/ebagcoder/harry-potter-theme/blob/main/fonts/lumos.TTF') format('truetype');
   }
   
   @font-face {
     font-family: 'HarryPotter';
     font-weight: 700;
     font-display: optional;
-    src: url('/mnt/Apps/Jellyfin-Themes/Harry-Potter/fonts/lumos.TTF') format('truetype');
+    src: url('https://github.com/ebagcoder/harry-potter-theme/blob/main/fonts/lumos.TTF') format('truetype');
   }
   
   @font-face {
     font-family: 'HarryPotter';
     font-weight: 800;
     font-display: optional;
-    src: url('/mnt/Apps/Jellyfin-Themes/Harry-Potter/fonts/lumos.TTF') format('truetype');
+    src: url('https://github.com/ebagcoder/harry-potter-theme/blob/main/fonts/lumos.TTF') format('truetype');
   }
   
   @font-face {
     font-family: 'HarryPotter';
     font-weight: 900;
     font-display: optional;
-    src: url('/mnt/Apps/Jellyfin-Themes/Harry-Potter/fonts/lumos.TTF') format('truetype');
+    src: url('https://github.com/ebagcoder/harry-potter-theme/blob/main/fonts/lumos.TTF') format('truetype');
   }
   
   body,
