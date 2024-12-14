@@ -1,0 +1,90 @@
+/* Import Custom Fonts */
+@font-face {
+    font-family: 'Harry P';
+    src: url('./fonts/harryp.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lumos';
+    src: url('./fonts/lumos.TTF') format('truetype');
+}
+
+/* Change Login Screen Background */
+html, body {
+    background-image: url('/img/hogwarts.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #000; /* Fallback background color */
+}
+
+/* Customize Login Panel */
+.loginPage .loginPanel {
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent black panel */
+    border: 2px solid #ffcc00; /* Golden border to match Harry Potter theme */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Login Button Styling */
+.loginPage .loginButton {
+    background-color: #4a2e04; /* Wand-like brown */
+    color: #ffcc00; /* Golden text */
+    font-family: 'Harry P', sans-serif; /* Replace with your chosen font */
+    font-size: 18px;
+    border: 1px solid #ffcc00;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.loginPage .loginButton:hover {
+    background-color: #ffcc00; /* Golden hover effect */
+    color: #4a2e04;
+}
+
+/* Change Login Title Text */
+.loginPage .logo {
+    display: none; /* Hide default Jellyfin logo */
+}
+
+.loginPage .loginPanel:before {
+    content: 'Welcome to Hogwarts Library'; /* Custom login screen text */
+    font-family: 'Harry P', sans-serif; /* Replace with your chosen font */
+    font-size: 32px;
+    color: #ffcc00;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.loginPage input[type="text"],
+.loginPage input[type="password"] {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    font-family: 'Lumos', sans-serif;
+    border: 1px solid #ffcc00;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.loginPage input[type="text"]::placeholder,
+.loginPage input[type="password"]::placeholder {
+    color: #4a2e04;
+    font-style: italic;
+}
+
+/* Adjust Input Focus */
+.loginPage input[type="text"]:focus,
+.loginPage input[type="password"]:focus {
+    border-color: #ffcc00;
+    box-shadow: 0px 0px 5px #ffcc00;
+}
+
+/* Footer Customization */
+.loginPage .footer {
+    font-family: 'Lumos', sans-serif;
+    color: #ffcc00;
+    text-align: center;
+    margin-top: 20px;
+}
