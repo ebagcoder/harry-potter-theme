@@ -1,90 +1,262 @@
-/* Import Custom Fonts */
-@font-face {
-    font-family: 'Harry P';
-    src: url('./fonts/harryp.TTF') format('truetype');
+/* Ensure the header background is transparent with a blur effect */
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred {
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.4); /* Make the background semi-transparent */
+    backdrop-filter: blur(10px); /* Add blur effect */
+
+  }
+  
+  /* Remove background when there's no home button */
+  .skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.noHomeButtonHeader {
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Modify card and item detail image styling */
+  .cardContent-button,
+  .itemDetailImage {
+    border-radius: 0.25em;
+    right: 75% !important;
+  }
+  
+  /* Customize cast content */
+  #castContent .card.overflowPortraitCard {
+    width: 4.2cm;
+    font-size: 90%;
+    right: 75% !important;
+  }
+  
+  #castContent .personCard {
+    width: auto;
+  }
+  
+  #castContent .personCard .cardBox {
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+  
+  #castContent {
+    flex-wrap: wrap;
+    max-height: 9.75em;
+  }
+  
+  div.personCard > :first-child > :first-child {
+    display: none;
+  }
+  
+  /* Align text and adjust font size */
+  .itemDetailPage .cardText {
+    z-index:-1;
+    background: transparent;
+  }
+  
+  .itemDetailPage .textActionButton {
+    text-align: left;
+    background: transparent;
+  }
+  
+  /* Hide similar content and star rating */
+  #similarCollapsible {
+    display: none;
+  }
+  
+  div.starRatingContainer {
+    display: none;
+  }
+  
+  /* Make the count indicator icon dark and transparent */
+  .countIndicator {
+    background: #00000058;
+  }
+  
+  /* Adjust tab font size */
+  .headerTabs.sectionTabs {
+    text-size-adjust: 110%;
+    font-size: 110%;
+  }
+  
+  .pageTitle {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  /* Adjust padding on Emby tab buttons */
+  .emby-tab-button {
+    padding: 1.75em 1.7em;
+  }
+  
+  /* Apply transparent background to the page and dialogs */
+  .backgroundContainer,
+  .dialog,
+  html {
+    background: transparent;
+  }
+
+/* If there's a specific overlay or background that's still showing, make sure it's removed */
+.detailPageWrapperContainer {
+    background: transparent !important;
+}
+.detailPageSecondaryContainer  {
+    background: transparent !important;
+    z-index: 900;
+}
+.details-page .cardImageContainer .cardContent {
+    display: none;
+    z-index:-1;
 }
 
-@font-face {
-    font-family: 'Lumos';
-    src: url('./fonts/lumos.TTF') format('truetype');
+/* Hide the background image for the title card */
+.itemBackdrop {
+    background-image: none !important;
+    z-index:-1;
+}
+#itemDetailPage .cardPadder, #itemDetailPage .cardImageContainer {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    overflow: hidden !important;
+    z-index:-1;
+}
+#itemDetailPage .detailLogo {
+    position: absolute;
+    top: 200px; /* Adjust the vertical position */
+    left: -1%; /* Add left padding to move the logo to the left */
+    padding: 0 10px; /* Add horizontal padding to ensure space around the logo */
+    max-width: 100%; /* Ensure the logo fits within the available space */
 }
 
-/* Change Login Screen Background */
-html, body {
-    background-image: url('/img/hogwarts.png'); /* Replace with your image path */
+
+#itemDetailPage .detailLogo img {
+    width: auto; /* Preserve aspect ratio */
+    height: 100px; /* Set a default height to maintain consistency */
+    max-width: 100%; /* Ensure it doesn't overflow */
+}
+
+#itemDetailPage .detailPageContent {
+    right: 75% !important;
+    padding-left: 1vw;
+}
+
+#itemDetailPage .detailPagePrimaryContainer {
+    background: transparent !important;
+    padding-left: 0vw;
+}
+
+#itemDetailPage .detailPagePrimaryContainer .infoWrapper {
+    background: transparent !important;
+    padding-left: 1vw;
+}
+
+/* Login Page Background */
+#loginPage {
+    background: url('https://raw.githubusercontent.com/ebagcoder/harry-potter-theme/refs/heads/main/img/hogwarts.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    background-color: #000; /* Fallback background color */
+    position: relative;
+    min-height: 100vh; /* Ensures full viewport height */
+    overflow-y: auto; /* Enable scrolling */
 }
 
-/* Customize Login Panel */
-.loginPage .loginPanel {
-    background-color: rgba(0, 0, 0, 0.8); /* Transparent black panel */
-    border: 2px solid #ffcc00; /* Golden border to match Harry Potter theme */
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
-}
-
-/* Login Button Styling */
-.loginPage .loginButton {
-    background-color: #4a2e04; /* Wand-like brown */
-    color: #ffcc00; /* Golden text */
-    font-family: 'Harry P', sans-serif; /* Replace with your chosen font */
-    font-size: 18px;
-    border: 1px solid #ffcc00;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.loginPage .loginButton:hover {
-    background-color: #ffcc00; /* Golden hover effect */
-    color: #4a2e04;
-}
-
-/* Change Login Title Text */
-.loginPage .logo {
-    display: none; /* Hide default Jellyfin logo */
-}
-
-.loginPage .loginPanel:before {
-    content: 'Welcome to Hogwarts Library'; /* Custom login screen text */
-    font-family: 'Harry P', sans-serif; /* Replace with your chosen font */
-    font-size: 32px;
-    color: #ffcc00;
+/* Login Title Styling */
+#loginPage .loginPanel:before {
+    content: 'Welcome to the Hogwarts Media Library'; /* Harry Potter themed title */
+    color: #ffc500 !important; /* Golden text */
+    font-size: 26px !important;
     text-align: center;
     display: block;
     margin-bottom: 20px;
 }
 
-/* Input Fields */
-.loginPage input[type="text"],
-.loginPage input[type="password"] {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #000;
-    font-family: 'Lumos', sans-serif;
-    border: 1px solid #ffcc00;
+/* Login Title */
+#loginPage .loginPanel:before {
+    content: 'Welcome to the Hogwarts Media Library'; /* Replace the title */
+    display: block;
+    color: #ffc500;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input Fields Styling */
+#loginPage input[type="text"]::placeholder {
+    color: #ffc500; /* Golden placeholder */
+    font-style: italic;
+    content: 'Enter Wizard Name'; /* Placeholder for Username */
+}
+
+#loginPage input[type="password"]::placeholder {
+    color: #ffc500; /* Golden placeholder */
+    font-style: italic;
+    content: 'Enter Password Charm'; /* Placeholder for Password */
+}
+
+#loginPage input[type="text"],
+#loginPage input[type="password"] {
+    background-color: rgba(50, 50, 50, 0.8); /* Dark translucent input fields */
+    border: 2px solid #ffc500;
     border-radius: 5px;
     padding: 10px;
+    color: #ffc500;
 }
 
-.loginPage input[type="text"]::placeholder,
-.loginPage input[type="password"]::placeholder {
-    color: #4a2e04;
-    font-style: italic;
+/* Checkbox Label */
+#loginPage label[for="rememberMe"]::before {
+    content: "Keep Me Enchanted"; /* Replace the "Remember Me" text */
+    color: #ffc500;
 }
 
-/* Adjust Input Focus */
-.loginPage input[type="text"]:focus,
-.loginPage input[type="password"]:focus {
-    border-color: #ffcc00;
-    box-shadow: 0px 0px 5px #ffcc00;
+/* Buttons Styling */
+#loginPage .loginButton {
+    background: linear-gradient(45deg, #d4af37, #ffc500); /* Golden gradient */
+    color: #000;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid #ffc500;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Footer Customization */
-.loginPage .footer {
-    font-family: 'Lumos', sans-serif;
-    color: #ffcc00;
-    text-align: center;
-    margin-top: 20px;
+#loginPage .loginButton:hover {
+    background: #ffc500; /* Solid gold on hover */
+    color: #000;
+}
+
+#loginPage .secondaryButton:nth-child(1)::before {
+    content: 'Floo Network Connection'; /* Replace Quick Connect text */
+    display: block;
+}
+
+#loginPage .secondaryButton:nth-child(2)::before {
+    content: 'Forgot Your Spell?'; /* Replace Forgot Password text */
+    display: block;
+}
+
+#loginPage .secondaryButton {
+    background-color: rgba(50, 50, 50, 0.8); /* Dark translucent buttons */
+    color: #ffc500;
+    border: 2px solid #ffc500;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#loginPage .secondaryButton:hover {
+    background: #ffc500; /* Solid gold on hover */
+    color: #000;
+}
+
+/* Scrollbar Styling */
+#loginPage ::-webkit-scrollbar {
+    width: 10px;
+}
+
+#loginPage ::-webkit-scrollbar-thumb {
+    background-color: #ffc500;
+    border-radius: 5px;
+}
+
+#loginPage ::-webkit-scrollbar-thumb:hover {
+    background-color: #d4af37;
 }
